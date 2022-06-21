@@ -1,0 +1,30 @@
+<%- include ('partials/header.ejs')%>
+<body>
+    <section class="container-flex">
+        <article class="card-birthday">
+            <h2>0 aniversariantes</h2>
+            <ul class="list-birthday-person">
+                <li class="birthday-person">
+                    <div class="img-birthday-person">
+                        <img src="/img/avatar.jpg" alt="">
+                    </div>
+                    <div class="info-birthday-person">
+                        <h1>Vittor Daniel</h1>
+                        <p>19 anos -<span class="date-birthday"> 11/08 | SAB</span></p>
+                    </div>
+                    <div class="button-delete">X</div>
+                </li>
+            </ul>
+            <div class="buttons">
+                <a href="/cadastrar">Adicionar Aniversariante</a>
+            </div>
+            <div class="toogle-theme-btn">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+        </article>
+    </section>
+</body>
+<%- include ('partials/footer.ejs')%>

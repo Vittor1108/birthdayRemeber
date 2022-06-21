@@ -1,0 +1,23 @@
+<%- include ('partials/header.ejs')%>
+<body>
+    <section class="container-flex">
+        <article class="card-birthday">
+          <h2>Cadastre um novo aniversariantes</h2>
+          <form action="">
+            <label for="name"><span>*</span> Nome do aniversariante:</label>
+            <input type="text" id="name" required>
+            <label for="date"><span>*</span> Data do anivesariante:</label>
+            <input type="date" id="date" required>
+            <label for="email">Email do aniversariante:</label>
+            <input type="email" id="email">
+            <span class="emailSpan">Enviaremos um e-mail parabenizando o aniversariante!</span>
+            <label for="bornDate">Data de nascimento do aniversariante:</label>
+            <input type="date">
+            <label for="photo"><span>*</span> Foto do aniversariante:</label>
+            <input type="file" required>
+            <input type="submit" id="enviar">
+          </form>
+        </article>
+    </section>
+</body>
+<%- include ('partials/footer.ejs')%>

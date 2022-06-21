@@ -1,0 +1,45 @@
+form{
+    margin: 20px auto;
+    padding: 0 7px;
+}
+
+label{
+    display: block;
+    margin: 25px auto 5px auto;
+    word-wrap: break-word;
+}
+
+input{
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+span{
+    color: red;
+    word-wrap: break-word;
+}
+
+.emailSpan{
+    color: var(--female-secondary-font-color);
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+#enviar{
+    display: block;
+    color: white;
+    padding: 10px 7px;
+    background-color: var(--female-bg-color);
+    text-align: center;
+    transition: all .3s;
+    word-wrap: break-word;
+    cursor: pointer;
+    margin: 15px auto 10px auto;
+    border: none;
+}
+
+#enviar:hover{
+    background-color: var(--hover-female-btn);
+}
