@@ -2,18 +2,25 @@
 <body>
     <section class="container-flex">
         <article class="card-birthday">
-            <h2>0 aniversariantes</h2>
+            <h2>0 aniversariante</h2>
             <ul class="list-birthday-person">
-                <li class="birthday-person">
-                    <div class="img-birthday-person">
-                        <img src="/img/avatar.jpg" alt="">
-                    </div>
-                    <div class="info-birthday-person">
-                        <h1>Vittor Daniel</h1>
-                        <p>19 anos -<span class="date-birthday"> 11/08 | SAB</span></p>
-                    </div>
-                    <div class="button-delete">X</div>
-                </li>
+
+                <% perguntas.forEach(pergunta => { %>
+                    <li class="birthday-person">
+                        <div class="img-birthday-person">
+                            <img src="/img/avatar.jpg" alt="">
+                        </div>
+                        <div class="info-birthday-person">
+                            <h1> <%= pergunta.nome%>  </h1>
+                            <p>19 anos -<span class="date-birthday"> <%= pergunta.aniversario%></span></p>
+                        </div>
+                        <div class="button-delete">X</div>
+                    </li> 
+                <%})%>
+
+                <div class="no-birthday-div">
+                    <p>Não há aniversariantes cadastrados ):</p>
+                </div>
             </ul>
             <div class="buttons">
                 <a href="/cadastrar">Adicionar Aniversariante</a>

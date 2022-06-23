@@ -69,6 +69,11 @@ body{
     position: relative;
 }
 
+.no-birthday-div{
+    text-align: center;
+    margin: 10px auto 15px auto;
+    color: var(--female-secondary-font-color);
+}
 
 .info-birthday-person{
     flex: 2;

@@ -43,3 +43,19 @@ span{
 #enviar:hover{
     background-color: var(--hover-female-btn);
 }
+
+.btnBack{
+    display: block;
+    color: white;
+    padding: 8px 5px;
+    background-color: var(--female-bg-color);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btnBack:hover{
+    background-color: var(--hover-female-btn);
+
+}

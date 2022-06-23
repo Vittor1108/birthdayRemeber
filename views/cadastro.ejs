@@ -1,23 +1,42 @@
 <%- include ('partials/header.ejs')%>
 <body>
     <section class="container-flex">
+
         <article class="card-birthday">
+
           <h2>Cadastre um novo aniversariantes</h2>
-          <form action="">
+
+          <form action="/salvarcadastro" method="POST">
+
             <label for="name"><span>*</span> Nome do aniversariante:</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" required name="nomeAniversariante">
+
             <label for="date"><span>*</span> Data do anivesariante:</label>
-            <input type="date" id="date" required>
+            <input type="date" id="date" required name="dataAniversario">
+
             <label for="email">Email do aniversariante:</label>
-            <input type="email" id="email">
+            <input type="email" id="email" name="email">
             <span class="emailSpan">Enviaremos um e-mail parabenizando o aniversariante!</span>
+
             <label for="bornDate">Data de nascimento do aniversariante:</label>
-            <input type="date">
-            <label for="photo"><span>*</span> Foto do aniversariante:</label>
-            <input type="file" required>
+            <input type="date" name="dataNascimento">
+
+            <label for="file"><span>*</span> Foto do aniversariante:</label>
+            <input type="file" required name="fileA" id="file">
+
             <input type="submit" id="enviar">
+            <a href="/" class="btnBack">Voltar</a>
+
           </form>
         </article>
+
+        <div class="toogle-theme-btn">
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+      </div>
+
     </section>
 </body>
 <%- include ('partials/footer.ejs')%>
