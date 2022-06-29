@@ -4,16 +4,16 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-:root{
-    --female-bg-color: #f18bb2;
-    --female-primary-font-color: #212530;
-    --female-secondary-font-color: #627890;
-    --hover-female-btn: #e66194;
+
+html{
+    --bg: #f18bb2;
+    --bg-panel: #212530;
+    --color-headings: #627890;
+    --color-text: #e66194;
 }
 
 body{
-    background-color: var(--female-bg-color);
-
+    background-color: var(--bg);
 }
 
 .container-flex{
@@ -30,7 +30,7 @@ body{
     color: var(--female-primary-font-color);
     font-weight: normal;
     text-align: center;
-    border-bottom: 1px solid var(--female-secondary-font-color);
+    border-bottom: 1px solid var(--female-secondary);
     word-wrap: break-word;
 }
 
@@ -40,6 +40,8 @@ body{
     padding: 15px;
     max-width: 450px;
     width: 90%;
+    overflow-y: scroll;
+    max-height: 620px;
 }
 
 .list-birthday-person{
@@ -72,7 +74,7 @@ body{
 .no-birthday-div{
     text-align: center;
     margin: 10px auto 15px auto;
-    color: var(--female-secondary-font-color);
+    color: var(--female-secondary);
 }
 
 .info-birthday-person{
@@ -80,11 +82,11 @@ body{
 }
 
 .info-birthday-person h1{
-    color: var(--female-primary-font-color);
+    color: var(--female-primary);
 }
 
 .info-birthday-person p{
-    color: var(--female-secondary-font-color);
+    color: var(--female-secondary);
     font-size: 14px;
 }
 
@@ -97,7 +99,7 @@ body{
     display: block;
     color: white;
     padding: 10px 7px;
-    background-color: var(--female-bg-color);
+    background-color: var(--bg);
     text-decoration: none;
     text-align: center;
     transition: all .3s;
@@ -106,18 +108,19 @@ body{
 
 
 .buttons > a:hover{
-    background-color: var(--hover-female-btn);
+    background-color: var(--color-text);
 }
 
 .button-delete{
-    background-color: var(--female-bg-color);
+    background-color: var(--bg);
     position: absolute;
     right: 0;
-    padding: 0px 5px;
+    padding: 2px 7px;
     color: white;
     opacity: 0;
     transition: all .3s;
     cursor: pointer;
+    border:none;
 }
 
 .list-birthday-person li:hover .button-delete{
@@ -192,7 +195,7 @@ input:checked + .slider:before {
 }
 
 .date-birthday{
-    color:var(--female-secondary-font-color);
+    color:var(--female-secondary);
 }
 
 @media screen and (max-width:340px){

@@ -21,7 +21,7 @@ span{
 }
 
 .emailSpan{
-    color: var(--female-secondary-font-color);
+    color: var(--bg-panel);
     font-size: 14px;
     margin-top: 5px;
     display: block;
@@ -31,8 +31,7 @@ span{
     display: block;
     color: white;
     padding: 10px 7px;
-    background-color: var(--female-bg-color);
-    text-align: center;
+    background-color: var(--bg);
     transition: all .3s;
     word-wrap: break-word;
     cursor: pointer;
@@ -41,14 +40,14 @@ span{
 }
 
 #enviar:hover{
-    background-color: var(--hover-female-btn);
+    background-color: var(--color-text);
 }
 
 .btnBack{
     display: block;
     color: white;
     padding: 8px 5px;
-    background-color: var(--female-bg-color);
+    background-color: var(--bg);
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -56,6 +55,6 @@ span{
 }
 
 .btnBack:hover{
-    background-color: var(--hover-female-btn);
+    background-color: var(--color-text);
 
 }

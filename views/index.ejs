@@ -7,30 +7,42 @@
 
                 <% perguntas.forEach(pergunta => { %>
                     <li class="birthday-person">
+
                         <div class="img-birthday-person">
                             <img src="/img/avatar.jpg" alt="">
                         </div>
+
                         <div class="info-birthday-person">
                             <h1> <%= pergunta.nome%>  </h1>
-                            <p>19 anos -<span class="date-birthday"> <%= pergunta.aniversario%></span></p>
+                            <p> <%= pergunta.nascimento%> anos -<span class="date-birthday">Aniversário: <%= pergunta.aniversario%></span></p>
                         </div>
-                        <div class="button-delete">X</div>
+
+                        <form action="/deletar" method="POST">
+                            <input type="hidden" name="id" value="<%= pergunta.id%>">
+                            <button class="button-delete">X</button>
+                        </form>
+                            
                     </li> 
                 <%})%>
 
                 <div class="no-birthday-div">
                     <p>Não há aniversariantes cadastrados ):</p>
                 </div>
+
             </ul>
+
             <div class="buttons">
                 <a href="/cadastrar">Adicionar Aniversariante</a>
             </div>
+
             <div class="toogle-theme-btn">
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" name=switch-theme>
                     <span class="slider round"></span>
-                  </label>
+                </label>
+
             </div>
+
         </article>
     </section>
 </body>

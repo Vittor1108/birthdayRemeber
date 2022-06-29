@@ -17,8 +17,8 @@ const Usuarios = connection.define("usuarios", {
     },
 
     nascimento:{
-        type: Sequelize.STRING,
-    }   
+        type: Sequelize.INTEGER,
+    }
 });
 
 
