@@ -6,7 +6,7 @@
 
           <h2>Cadastre um novo aniversariantes</h2>
 
-          <form action="/salvarcadastro" method="POST">
+          <form action="/salvarcadastro" method="POST" enctype="multipart/form-data">
 
             <label for="name"><span>*</span> Nome do aniversariante:</label>
             <input type="text" id="name" required name="nomeAniversariante">
@@ -20,9 +20,11 @@
 
             <label for="bornDate">Ano de nascimento do aniversariante:</label>
             <input type="number" name="dataNascimento">
-<!-- 
+
             <label for="file"><span>*</span> Foto do aniversariante:</label>
-            <input type="file" required name="file" id="file"> -->
+            <input type="file" required name="file" id="file">
+
+            <input type="hidden" id="nameFile" name="nameFile">
 
             <input type="submit" id="enviar">
             <a href="/" class="btnBack">Voltar</a>
@@ -40,3 +42,19 @@
     </section>
 </body>
 <%- include ('partials/footer.ejs')%>
+<script>
+  const file = document.querySelector("#file");
+  const btn = document.querySelector("#enviar");
+  const nameFile = document.querySelector("#nameFile");
+  const form = document.querySelector("form");
+  
+  form.addEventListener("submit", e =>{    
+    const date = new Date()
+    let nome;
+    if(file.files.length > 0) nome = file.files[0].name;
+    const extensao = nome.split('.').pop();
+    const fileName = nome + date.getUTCHours()  + '.' + extensao;
+    nameFile.value = fileName;  
+  });
+
+</script>

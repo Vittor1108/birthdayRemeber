@@ -18,6 +18,10 @@ const Usuarios = connection.define("usuarios", {
 
     nascimento:{
         type: Sequelize.INTEGER,
+    },
+
+    fileName:{
+        type: Sequelize.STRING
     }
 });
 

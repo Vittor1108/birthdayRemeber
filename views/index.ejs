@@ -9,9 +9,9 @@
                     <li class="birthday-person">
 
                         <div class="img-birthday-person">
-                            <img src="/img/avatar.jpg" alt="">
+                            <img src="uploads/<%= pergunta.fileName %>" alt="">
                         </div>
-
+         
                         <div class="info-birthday-person">
                             <h1> <%= pergunta.nome%>  </h1>
                             <p> <%= pergunta.nascimento%> anos -<span class="date-birthday">Aniversário: <%= pergunta.aniversario%></span></p>
@@ -19,6 +19,7 @@
 
                         <form action="/deletar" method="POST">
                             <input type="hidden" name="id" value="<%= pergunta.id%>">
+                            <input type="hidden" name="fileName" value="<%= pergunta.fileName %>">
                             <button class="button-delete">X</button>
                         </form>
                             
@@ -47,3 +48,6 @@
     </section>
 </body>
 <%- include ('partials/footer.ejs')%>
+<script>
+
+</script>
